@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".part.PartDemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <TextView
+                android:layout_margin="8dp"
+                android:text="Spinner: "
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/s_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:entries="@array/languages"
+                android:scrollbarSize="32sp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/s_spinner_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:entries="@array/languages"
+                android:scrollbarSize="32sp"
+                android:spinnerMode="dialog" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/bt_normal_dialog"
+                android:text="Dialog"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/bt_item_dialog"
+                android:text="Dialog"
+                android:textAllCaps="false" />
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

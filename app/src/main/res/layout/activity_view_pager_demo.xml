@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".part.viewpagerdemo.ViewPagerDemoActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_demo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:text="hello"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

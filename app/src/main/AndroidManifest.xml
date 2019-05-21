@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pk.wei.com.newpractice">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- cn.yipianfengye.android:zxing-library:2.2 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layout.LoginActivity"
+            android:label="Login">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".service.ServiceMangerActivity" />
+        <activity android:name=".part.listviewdemo.ListViewDemoActivity" />
+        <activity android:name=".animator.AnimatorDemoActivity" />
+        <activity android:name=".part.recyclerlistdemo.RecyclerDemoActivity" />
+        <activity android:name=".part.viewpagerdemo.ViewPagerDemoActivity" />
+        <activity android:name=".sharedpreferencesdemo.SharedPreferencesDemoActivity" />
+        <activity android:name=".sharedpreferencesdemo.PreferenceActivityDemoActivity" />
+        <activity android:name=".testdemo.TestActivity" />
+        <activity android:name=".fragment.fragmentdemo.FragmentDemoActivity" />
+        <activity android:name=".fragment.fragment_auto_change.FragmentAutoChangeActivity" />
+
+        <service
+            android:name=".service.TestService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActionBarDemoActivity" />
+        <activity android:name=".scrolldemo.ScrollClashDemoActivity" />
+        <activity android:name=".thirdParty.OKHttp.OKHttpDemoActivity" />
+        <activity android:name=".customViewDemo.CustomViewDemoActivity" />
+        <activity android:name=".thirdParty.glide.GlideDemoActivity" />
+        <activity android:name=".fragment.dialog.DialogFragmentDemoActivity" />
+        <activity android:name=".layout.ConstraintActivity" />
+        <activity android:name=".camera.CameraDemoActivity" />
+        <activity android:name=".camera.ScanActivity" />
+        <activity android:name=".component.LifeCycleActivity" />
+        <activity
+            android:name=".component.DialogActivity"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity android:name=".pattern.MVCDemoActivity" />
+        <activity android:name=".camera.ScanDemoActivity" />
+        <activity android:name=".part.PartDemoActivity" />
+        <activity android:name=".broadcast.BroadcastDemoActivity" />
+
+        <!--
+        // android:enabled=["true" | "false"]
+        能否接收其他App的发出的广播
+        // android:exported=["true" | "false"]
+        默认值是由 receiver 中有无 intent-filter 决定的
+        如果有intent-filter，默认值为 true，否则为 false
+        // android:name=".BroadcastReceiver"
+        继承 BroadcastReceiver 子类的类名
+        // android:permission="string"
+        具有相应权限的广播发送者发送的广播才能被此 BroadcastReceiver 所接收
+        // android:process="string"
+        BroadcastReceiver 运行所处的进程
+        默认为 app 的进程，可以指定独立的进程
+        注：Android 四大基本组件都可以通过此属性指定自己的独立进程
+        -->
+        <receiver android:name=".broadcast.NetworkChangeReceiver">
+
+            <!-- 用于接收网络状态改变时发出的广播 -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 静态注册 -->
+        <receiver android:name=".broadcast.CustomReceiver">
+            <intent-filter>
+                <action android:name="CUSTOM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".thirdParty.RxJava.RxJavaDemoActivity" />
+        <activity android:name=".thirdParty.Event.EventDemoActivity"></activity>
+    </application>
+
+</manifest>

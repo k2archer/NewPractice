@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Design Pattern" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/mvc"
+                android:layout_columnWeight="1"
+                android:text="MVC" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="四大组件" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/bt_activity"
+                android:layout_columnWeight="1"
+                android:text="Activity" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="" />
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="LayoutDemo" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/constraint_btn"
+                android:layout_columnWeight="1"
+                android:text="ConstraintLayout"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="布局"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_part_demo"
+                android:layout_columnWeight="1"
+                android:text="控件Demo"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/list_view_btn"
+                android:layout_columnWeight="1"
+                android:text="ListView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/recycler_view_btn"
+                android:layout_columnWeight="1"
+                android:text="RecyclerView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="ScrollView"
+                android:textAllCaps="false" />
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="View" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+
+            <Button
+                android:id="@+id/scroll_clash"
+                android:layout_columnWeight="1"
+                android:text="滑动冲突"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="自定义绘画"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/custom_view"
+                android:layout_columnWeight="1"
+                android:text="自定义View"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/view_pager_btn"
+                android:layout_columnWeight="1"
+                android:text="ViewPager"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/fragment_btn"
+                android:layout_columnWeight="1"
+                android:text="Fragment"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/DialogFragment"
+                android:layout_columnWeight="1"
+                android:text="Fragment"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/action_bar_btn"
+                android:layout_columnWeight="1"
+                android:text="ActionBar"
+                android:textAllCaps="false" />
+
+        </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="测试" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="动画" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="Animation"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/animator_btn"
+                android:layout_columnWeight="1"
+                android:text="Animator"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="LayoutAnimaton"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="SVG 动画"
+                android:textAllCaps="false" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="数据存储" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="File"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/shared_preference_btn"
+                android:layout_columnWeight="1"
+                android:text="SharedPreference"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/preference_activity_btn"
+                android:layout_columnWeight="1"
+                android:text="PreferenceActivty"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="SQLite"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_columnWeight="1"
+                android:text="Provider"
+                android:textAllCaps="false" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="第三方框架" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/glide_demo"
+                android:layout_columnWeight="1"
+                android:text="Glide"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/rxjava_demo"
+                android:layout_columnWeight="1"
+                android:text="RxJava"
+                android:textAllCaps="false" />
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

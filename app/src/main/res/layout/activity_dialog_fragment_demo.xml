@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.dialog.DialogFragmentDemoActivity">
+
+    <RadioGroup
+        android:id="@+id/dialog_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/normal_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="普通" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/fragment_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="FragmentDialog"
+        android:textAllCaps="false" />
+
+
+    <!--android:name="pk.wei.com.newpractice.fragment.dialog.DialogFragmentDemo"-->
+    <Button
+        android:id="@+id/large_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="AlertDialog"
+        android:textAllCaps="false" />
+
+    <FrameLayout
+        android:id="@+id/dialog_fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="checkbox"
+        android:title="是否开启"
+        android:summaryOff="已经关闭"
+        android:summaryOn="已经开启"
+        />
+
+    <ListPreference
+        android:key="list"
+        android:title="请选择一个"
+        android:summary="请点击"
+        android:entries="@array/entries"
+        android:entryValues="@array/values"
+        />
+
+    <EditTextPreference
+        android:key="text"
+        android:title="编辑名字"
+        android:dialogTitle="输入名字"
+        android:dialogMessage="请在此输入"
+        android:summary="请点击"/>
+
+    <MultiSelectListPreference
+        android:key="abc"
+        android:entries="@array/entries"
+        android:entryValues="@array/values"
+        android:title="重复"
+        android:summary="无"
+        />
+
+    <SwitchPreference
+        android:key="switch"
+        android:title="开关"
+        android:summary="无"
+        />
+
+    <RingtonePreference android:key="ringtone"
+        android:title="Ringtone Preference"
+        android:showDefault="true"
+        android:showSilent="true"
+        android:summary="Pick a tone, any tone"/>
+
+    <PreferenceCategory android:title="Detail Screens">
+        <PreferenceScreen android:title="Detail"
+            android:summary="Addtional preference help in another page">
+            <CheckBoxPreference android:key="checkbox2"
+                android:title="Another Checkbox"
+                android:summary="On or Off, It's a problem...."/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

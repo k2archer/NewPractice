@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/frame_layout"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:background="#2B2B2B">>-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/image1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:background="@color/colorNormalButton" />-->
+
+        <!--</FrameLayout>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/lable1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:text="外框调节"-->
+            <!--android:textSize="40sp" />-->
+
+        <!--<SeekBar-->
+            <!--android:id="@+id/seekbar_width"-->
+            <!--android:layout_width="180dp"-->
+            <!--android:layout_height="30dp"-->
+
+            <!--android:layout_alignTop="@+id/lable1"-->
+            <!--android:layout_toEndOf="@+id/lable1"-->
+            <!--android:layout_toRightOf="@+id/lable1" />-->
+
+        <!--<SeekBar-->
+            <!--android:id="@+id/seekbar_height"-->
+            <!--android:layout_width="180dp"-->
+            <!--android:layout_height="30dp"-->
+
+            <!--android:layout_alignBottom="@+id/lable1"-->
+            <!--android:layout_toEndOf="@+id/lable1"-->
+            <!--android:layout_toRightOf="@+id/lable1" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/lable_width"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignTop="@+id/lable1"-->
+            <!--android:layout_toEndOf="@+id/seekbar_width"-->
+            <!--android:layout_toRightOf="@+id/seekbar_width"-->
+            <!--android:text="宽度"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/lable_height"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/lable1"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_toEndOf="@+id/seekbar_width"-->
+            <!--android:layout_toRightOf="@+id/seekbar_width"-->
+            <!--android:text="高度"-->
+            <!--android:textSize="20sp" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<include-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/frame_layout2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#2B2B2B">>
+
+            <ImageView
+                android:id="@+id/image122"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorNormalButton" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/lable12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="外框调节"
+            android:textSize="40sp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_width2"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+
+            android:layout_alignTop="@+id/lable12"
+            android:layout_toEndOf="@+id/lable12"
+            android:layout_toRightOf="@+id/lable12" />
+
+        <SeekBar
+            android:id="@+id/seekbar_height2"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+
+            android:layout_alignBottom="@+id/lable12"
+            android:layout_toEndOf="@+id/lable12"
+            android:layout_toRightOf="@+id/lable12" />
+
+        <TextView
+            android:id="@+id/lable_width2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/lable12"
+            android:layout_toEndOf="@+id/seekbar_width2"
+            android:layout_toRightOf="@+id/seekbar_width2"
+            android:text="宽度"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lable_height2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/lable12"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@+id/seekbar_width2"
+            android:layout_toRightOf="@+id/seekbar_width2"
+            android:text="高度"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

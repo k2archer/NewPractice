@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--边角-->
+    <!--<corners-->
+        <!--android:radius="32dp"-->
+        <!--android:topLeftRadius="8dp"-->
+        <!--android:topRightRadius="8dp"-->
+        <!--android:bottomLeftRadius="8dp"-->
+        <!--android:bottomRightRadius="8dp"-->
+        <!--&gt;</corners>-->
+
+    <!-- 渐变 -->
+    <gradient ></gradient>
+
+    <!--填充-->
+    <!--<padding-->
+        <!--android:left="1dp"-->
+        <!--android:right="1dp"-->
+        <!--android:top="1dp"-->
+        <!--android:bottom="1dp"-->
+        <!--&gt;</padding>-->
+    <!--大小-->
+    <!--<size-->
+        <!--android:width="10dp"-->
+        <!--android:height="10dp"-->
+        <!--&gt;</size>-->
+
+    <solid android:color="@color/colorNormalButton"></solid>
+
+    <!--边框-->
+    <!--<stroke-->
+        <!--android:color="@color/colorWhite"-->
+        <!--android:dashWidth="1dp"-->
+        <!--android:dashGap="10dp"-->
+        <!--android:width="0.1dp"-->
+        <!--&gt;</stroke>-->
+</shape>
