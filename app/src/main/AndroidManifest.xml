@@ -104,7 +104,8 @@
         </receiver>
 
         <activity android:name=".thirdParty.RxJava.RxJavaDemoActivity" />
-        <activity android:name=".thirdParty.Event.EventDemoActivity"></activity>
+        <activity android:name=".thirdParty.Event.EventDemoActivity" />
+        <activity android:name=".service.RemoteServiceDemoActivity"></activity>
     </application>
 
 </manifest>
