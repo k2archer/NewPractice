@@ -54,6 +54,10 @@
             android:name=".service.TestService"
             android:enabled="true"
             android:exported="true" />
+        <service
+            android:name=".service.IntentServiceDemo"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity android:name=".ActionBarDemoActivity" />
         <activity android:name=".scrolldemo.ScrollClashDemoActivity" />

@@ -42,6 +42,8 @@ public class ServiceMangerActivity extends AppCompatActivity {
     Button startClickBtn;
     @BindView(R.id.stop_click_btn)
     Button stopClickBtn;
+    @BindView(R.id.start_intent_service_btn)
+    Button startIntentServiceBtn;
 
     private Intent serviceIntent;
 
@@ -146,5 +148,12 @@ public class ServiceMangerActivity extends AppCompatActivity {
         if (serviceConnection != null) {
             unbindService(serviceConnection);
         }
+    }
+
+    @OnClick(R.id.start_intent_service_btn)
+    public void onStartIntentServiceClicked() {
+        Intent intent = new Intent(this, IntentServiceDemo.class);
+        intent.putExtra(IntentServiceDemo.TASK_NAME,"do something");
+        startService(intent);
     }
 }
