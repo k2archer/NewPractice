@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -28,6 +29,9 @@ public class PartDemoActivity extends AppCompatActivity {
     @BindView(R.id.bt_item_dialog)
     Button btItemDialog;
 
+    @BindArray(R.array.languages)
+    String[] languages;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,6 @@ public class PartDemoActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
 
-                String[] languages = getResources().getStringArray(R.array.languages);
                 Toast.makeText(PartDemoActivity.this,
                         "你点击的是:" + languages[pos], Toast.LENGTH_SHORT).show();
             }
