@@ -20,16 +20,17 @@ import pk.wei.com.newpractice.customViewDemo.CustomViewDemoActivity;
 import pk.wei.com.newpractice.fragment.dialog.DialogFragmentDemoActivity;
 import pk.wei.com.newpractice.fragment.fragmentdemo.FragmentDemoActivity;
 import pk.wei.com.newpractice.layout.ConstraintActivity;
-import pk.wei.com.newpractice.part.listviewdemo.ListViewDemoActivity;
 import pk.wei.com.newpractice.part.PartDemoActivity;
-import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
+import pk.wei.com.newpractice.part.listviewdemo.ListViewDemoActivity;
 import pk.wei.com.newpractice.part.recyclerlistdemo.RecyclerDemoActivity;
+import pk.wei.com.newpractice.part.viewpagerdemo.ViewPagerDemoActivity;
+import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
+import pk.wei.com.newpractice.pattern.mvp.view.MVPDemoActivity;
 import pk.wei.com.newpractice.scrolldemo.ScrollClashDemoActivity;
 import pk.wei.com.newpractice.sharedpreferencesdemo.PreferenceActivityDemoActivity;
 import pk.wei.com.newpractice.sharedpreferencesdemo.SharedPreferencesDemoActivity;
 import pk.wei.com.newpractice.thirdParty.RxJava.RxJavaDemoActivity;
 import pk.wei.com.newpractice.thirdParty.glide.GlideDemoActivity;
-import pk.wei.com.newpractice.part.viewpagerdemo.ViewPagerDemoActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         buttons.put(R.id.mvc, MVCDemoActivity.class);
+        buttons.put(R.id.mvp, MVPDemoActivity.class);
         buttons.put(R.id.bt_activity, LifeCycleActivity.class);
         buttons.put(R.id.constraint_btn, ConstraintActivity.class);
         buttons.put(R.id.scroll_clash, ScrollClashDemoActivity.class);

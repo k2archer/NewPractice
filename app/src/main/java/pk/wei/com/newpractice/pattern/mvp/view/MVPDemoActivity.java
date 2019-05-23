@@ -12,7 +12,7 @@ import pk.wei.com.newpractice.R;
 import pk.wei.com.newpractice.pattern.mvp.contract.LoginContract;
 import pk.wei.com.newpractice.pattern.mvp.presenter.LoginPresenter;
 
-public class LoginActivity extends AppCompatActivity implements LoginContract.View {
+public class MVPDemoActivity extends AppCompatActivity implements LoginContract.View {
 
     @BindView(R.id.login_account)
     EditText loginAccount;
@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void onSuccess() {
-        Toast.makeText(this, "Login succeed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Login succeed.", Toast.LENGTH_SHORT).show();
 //        startActivity(new Intent(this, MainActivity.class));
     }
 

@@ -23,6 +23,12 @@
                 android:id="@+id/mvc"
                 android:layout_columnWeight="1"
                 android:text="MVC" />
+
+            <Button
+                android:id="@+id/mvp"
+                android:layout_columnWeight="1"
+                android:text="MVP" />
+
         </GridLayout>
 
         <TextView
