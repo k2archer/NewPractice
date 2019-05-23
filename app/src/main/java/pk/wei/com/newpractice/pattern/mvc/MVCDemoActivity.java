@@ -1,4 +1,4 @@
-package pk.wei.com.newpractice.pattern;
+package pk.wei.com.newpractice.pattern.mvc;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

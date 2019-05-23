@@ -1,4 +1,4 @@
-package pk.wei.com.newpractice.pattern;
+package pk.wei.com.newpractice.pattern.mvc;
 
 public class BaseModelImpl implements BaseModel {
 

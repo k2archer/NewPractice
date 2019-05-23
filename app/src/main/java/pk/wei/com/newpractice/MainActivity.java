@@ -22,7 +22,7 @@ import pk.wei.com.newpractice.fragment.fragmentdemo.FragmentDemoActivity;
 import pk.wei.com.newpractice.layout.ConstraintActivity;
 import pk.wei.com.newpractice.part.listviewdemo.ListViewDemoActivity;
 import pk.wei.com.newpractice.part.PartDemoActivity;
-import pk.wei.com.newpractice.pattern.MVCDemoActivity;
+import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
 import pk.wei.com.newpractice.part.recyclerlistdemo.RecyclerDemoActivity;
 import pk.wei.com.newpractice.scrolldemo.ScrollClashDemoActivity;
 import pk.wei.com.newpractice.sharedpreferencesdemo.PreferenceActivityDemoActivity;
