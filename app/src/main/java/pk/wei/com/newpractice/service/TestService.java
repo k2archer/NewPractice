@@ -72,6 +72,7 @@ public class TestService extends Service {
         runClicked = false;
     }
 
+    // 通知保持 Service 前台，保活 Service
     private void startNotification() {
         Intent intent = new Intent(this, ServiceMangerActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -89,6 +90,17 @@ public class TestService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "onStartCommand: ");
         return super.onStartCommand(intent, flags, startId);
+
+        /* Service 所在进程被 kill ,Android 仍会交 Service 设置 started 状态，
+         * 不保存传入的 Intent 对象，Android 尝试重新创建 Service , 并执行
+         *  onStartCommand()
+         */
+        // return START_STICKY;
+
+        /* 和 START_STICKY 类似，但保留传入的 Intent 对象，重新创建 Service,
+         * 并执行 onStartCommand() 传入保留的 Intent 对象。
+         */
+        // return START_REDELIVER_INTENT;
     }
 
     @Override
@@ -109,5 +121,7 @@ public class TestService extends Service {
         super.onDestroy();
         Log.d(TAG, "onDestroy: ");
         stop(); // 需要停止 service 内部线程
+
+        /** 可在此发广播重启 Service ，保活 Service **/
     }
 }
