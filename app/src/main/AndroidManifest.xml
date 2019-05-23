@@ -50,9 +50,11 @@
         <activity android:name=".fragment.fragmentdemo.FragmentDemoActivity" />
         <activity android:name=".fragment.fragment_auto_change.FragmentAutoChangeActivity" />
 
-        <!-- 提高Service的优先级
+        <!--
+             提高Service的优先级
              android:priority = "1000"
-             1000是最高值，数字越小越低,也适用于广播 -->
+             1000是最高值，数字越小越低,也适用于广播
+        -->
         <service
             android:name=".service.TestService"
             android:enabled="true"
