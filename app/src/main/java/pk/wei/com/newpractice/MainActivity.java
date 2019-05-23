@@ -27,6 +27,7 @@ import pk.wei.com.newpractice.part.viewpagerdemo.ViewPagerDemoActivity;
 import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
 import pk.wei.com.newpractice.pattern.mvp.view.MVPDemoActivity;
 import pk.wei.com.newpractice.scrolldemo.ScrollClashDemoActivity;
+import pk.wei.com.newpractice.service.ServiceMangerActivity;
 import pk.wei.com.newpractice.sharedpreferencesdemo.PreferenceActivityDemoActivity;
 import pk.wei.com.newpractice.sharedpreferencesdemo.SharedPreferencesDemoActivity;
 import pk.wei.com.newpractice.thirdParty.RxJava.RxJavaDemoActivity;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons.put(R.id.mvc, MVCDemoActivity.class);
         buttons.put(R.id.mvp, MVPDemoActivity.class);
         buttons.put(R.id.bt_activity, LifeCycleActivity.class);
+        buttons.put(R.id.bt_service, ServiceMangerActivity.class);
         buttons.put(R.id.constraint_btn, ConstraintActivity.class);
         buttons.put(R.id.scroll_clash, ScrollClashDemoActivity.class);
         buttons.put(R.id.list_view_btn, ListViewDemoActivity.class);

@@ -45,11 +45,14 @@
             <Button
                 android:id="@+id/bt_activity"
                 android:layout_columnWeight="1"
-                android:text="Activity" />
+                android:text="Activity"
+                android:textAllCaps="false"/>
 
             <Button
+                android:id="@+id/bt_service"
                 android:layout_columnWeight="1"
-                android:text="" />
+                android:text="Service"
+                android:textAllCaps="false"/>
 
             <Button
                 android:layout_columnWeight="1"

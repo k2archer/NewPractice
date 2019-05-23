@@ -3,56 +3,109 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="pk.wei.com.newpractice.service.ServiceMangerActivity">
 
     <Button
-        android:id="@+id/bind_service_btn"
-        android:text="bindRemoteService"
-        android:textAllCaps="false"
+        android:id="@+id/start_service_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="parent"
         android:layout_marginTop="32dp"
+        android:text="startService"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bind_service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bindRemoteService"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_service_btn" />
+
+    <TextView
+        android:id="@+id/tv_click_count"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:hint="click"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unbind_service_btn" />
+
+    <Button
+        android:id="@+id/start_click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/tv_click_count"
+        app:layout_constraintRight_toLeftOf="@id/tv_click_count"
+        app:layout_constraintTop_toTopOf="@id/tv_click_count" />
+
+    <Button
+        android:id="@+id/stop_click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/tv_click_count"
+        app:layout_constraintLeft_toRightOf="@id/tv_click_count"
+        app:layout_constraintTop_toTopOf="@id/tv_click_count" />
 
     <Button
         android:id="@+id/unbind_service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="unbindRemoteService"
         android:textAllCaps="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bind_service_btn"/>
+        app:layout_constraintTop_toBottomOf="@+id/bind_service_btn" />
 
     <EditText
-        android:id="@+id/input_ed"
+        android:id="@+id/input_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="没有内容"
         android:text="the other data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/unbind_service_btn"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_click_count" />
+
     <Button
-        android:id="@+id/sync_data_btn"
-        android:text="SyncData"
-        android:textAllCaps="false"
+        android:id="@+id/sync_get_data_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="getData"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sync_set_data_btn"
+        app:layout_constraintTop_toBottomOf="@id/input_et" />
+
+    <Button
+        android:id="@+id/sync_set_data_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="setData"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toRightOf="@id/sync_get_data_btn"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_ed" />
+        app:layout_constraintTop_toBottomOf="@id/input_et" />
 
     <Button
         android:id="@+id/stop_service_btn"
-        android:text="stopService"
-        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="stopService"
+        android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sync_data_btn"/>
+        app:layout_constraintTop_toBottomOf="@id/sync_get_data_btn" />
 </android.support.constraint.ConstraintLayout>
