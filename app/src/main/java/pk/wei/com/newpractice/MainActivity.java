@@ -32,6 +32,7 @@ import pk.wei.com.newpractice.sharedpreferencesdemo.PreferenceActivityDemoActivi
 import pk.wei.com.newpractice.sharedpreferencesdemo.SharedPreferencesDemoActivity;
 import pk.wei.com.newpractice.thirdParty.RxJava.RxJavaDemoActivity;
 import pk.wei.com.newpractice.thirdParty.glide.GlideDemoActivity;
+import pk.wei.com.newpractice.thirdParty.retrofit.RetrofitDemoActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttons.put(R.id.glide_demo, GlideDemoActivity.class);
         buttons.put(R.id.rxjava_demo, RxJavaDemoActivity.class);
+        buttons.put(R.id.retrofit_demo, RetrofitDemoActivity.class);
 
         buttons.put(R.id.btn_test, ScanActivity.class);
 
