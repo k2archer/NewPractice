@@ -12,6 +12,9 @@ import pk.wei.com.newpractice.R;
 import pk.wei.com.newpractice.pattern.mvp.contract.LoginContract;
 import pk.wei.com.newpractice.pattern.mvp.presenter.LoginPresenter;
 
+/**
+ * 参考链接 https://blog.csdn.net/qq_35070105/article/details/69663298
+ **/
 public class MVPDemoActivity extends AppCompatActivity implements LoginContract.View {
 
     @BindView(R.id.login_account)

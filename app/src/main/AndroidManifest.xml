@@ -79,6 +79,7 @@
             android:name=".component.DialogActivity"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />
         <activity android:name=".pattern.mvc.MVCDemoActivity" />
+        <activity android:name=".pattern.mvp.view.MVPDemoActivity" />
         <activity android:name=".camera.ScanDemoActivity" />
         <activity android:name=".part.PartDemoActivity" />
         <activity android:name=".broadcast.BroadcastDemoActivity" />
