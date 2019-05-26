@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/NewPractice.iml" filepath="$PROJECT_DIR$/NewPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pklibrary/pklibrary.iml" filepath="$PROJECT_DIR$/pklibrary/pklibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remoteparactice/remoteparactice.iml" filepath="$PROJECT_DIR$/remoteparactice/remoteparactice.iml" />
     </modules>
   </component>
 </project>

@@ -38,6 +38,8 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    /** Android注解支持库（Support Annotations） **/
+    implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'org.jetbrains:annotations:15.0'
     /** RxJava 2 **/
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
