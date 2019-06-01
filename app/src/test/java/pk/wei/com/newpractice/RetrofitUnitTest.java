@@ -3,23 +3,27 @@ package pk.wei.com.newpractice;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 import okhttp3.mockwebserver.Dispatcher;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import okhttp3.mockwebserver.RecordedRequest;
-import pk.wei.com.newpractice.thirdParty.retrofit.TestClient;
+import pk.wei.com.newpractice.thirdParty.retrofit.InterceptorDemo;
 import pk.wei.com.newpractice.thirdParty.retrofit.StringCallAdapterFactory;
 import pk.wei.com.newpractice.thirdParty.retrofit.StringConverterFactory;
+import pk.wei.com.newpractice.thirdParty.retrofit.TestClient;
 import retrofit2.Retrofit;
 
 public class RetrofitUnitTest {
 
-    TestClient restClientV1;
+    MockWebServer mockWebServer;
 
     @Before
     public void create() {
-        MockWebServer mockWebServer = new MockWebServer();
+        mockWebServer = new MockWebServer();
         mockWebServer.setDispatcher(new Dispatcher() {
             @Override
             public MockResponse dispatch(RecordedRequest request) throws InterruptedException {
@@ -34,8 +38,12 @@ public class RetrofitUnitTest {
             }
         });
 
+    }
+
+    @Test
+    public void test() {
         OkHttpClient client = new OkHttpClient.Builder().build();
-        restClientV1 = new Retrofit.Builder()
+        TestClient testClient = new Retrofit.Builder()
                 .baseUrl(mockWebServer.url("/"))
                 .client(client)
                 .addCallAdapterFactory(new StringCallAdapterFactory())
@@ -43,11 +51,35 @@ public class RetrofitUnitTest {
                 .build()
                 .create(TestClient.class);
 
+        String name = testClient.getName(1);
+        System.out.println(name);
     }
 
     @Test
-    public void test() {
-        String detail = restClientV1.getName(1);
-        System.out.println(detail);
+    public void testInterceptor() {
+        int DEFAULT_TIMEOUT = 30; // 秒
+        OkHttpClient.Builder client = new OkHttpClient.Builder()
+                .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS) // 设置超时时间
+                .retryOnConnectionFailure(true);
+
+        // 添加拦截
+        client.addInterceptor(new InterceptorDemo());
+
+        TestClient testClient = new Retrofit.Builder()
+                .baseUrl(mockWebServer.url("/"))
+                .client(client.build())
+                .addCallAdapterFactory(new StringCallAdapterFactory())
+                .addConverterFactory(new StringConverterFactory())
+                .build()
+                .create(TestClient.class);
+
+        String name = testClient.getName(1);
+        System.out.println(name);
+
+        try {
+            mockWebServer.shutdown();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
