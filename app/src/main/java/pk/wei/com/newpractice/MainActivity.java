@@ -14,7 +14,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import pk.wei.com.newpractice.animator.AnimatorDemoActivity;
-import pk.wei.com.newpractice.camera.CameraDemoActivity;
 import pk.wei.com.newpractice.component.LifeCycleActivity;
 import pk.wei.com.newpractice.customViewDemo.CustomViewDemoActivity;
 import pk.wei.com.newpractice.fragment.dialog.DialogFragmentDemoActivity;
@@ -23,6 +22,7 @@ import pk.wei.com.newpractice.layout.ConstraintActivity;
 import pk.wei.com.newpractice.part.PartDemoActivity;
 import pk.wei.com.newpractice.part.listviewdemo.ListViewDemoActivity;
 import pk.wei.com.newpractice.part.recyclerlistdemo.RecyclerDemoActivity;
+import pk.wei.com.newpractice.part.swipeRefreshLayout.SwipeRefreshDemoActivity;
 import pk.wei.com.newpractice.part.viewpagerdemo.ViewPagerDemoActivity;
 import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
 import pk.wei.com.newpractice.pattern.mvp.view.MVPDemoActivity;
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons.put(R.id.rxjava_demo, RxJavaDemoActivity.class);
         buttons.put(R.id.retrofit_demo, RetrofitDemoActivity.class);
 
-        buttons.put(R.id.btn_test, CameraDemoActivity.class);
+        buttons.put(R.id.btn_test, SwipeRefreshDemoActivity.class);
 
         buttons.put(R.id.bt_part_demo, PartDemoActivity.class);
 
