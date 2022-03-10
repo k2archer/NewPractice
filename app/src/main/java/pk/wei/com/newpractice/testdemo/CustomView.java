@@ -1,7 +1,6 @@
 package pk.wei.com.newpractice.testdemo;
 
 import android.content.Context;
-import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -20,13 +19,13 @@ public class CustomView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        int widthSize = measureHandler(widthMeasureSpec);
-        int heightSize = measureHandler(heightMeasureSpec);
+//        int widthSize = measureHandler(widthMeasureSpec);
+//        int heightSize = measureHandler(heightMeasureSpec);
+//
+//        Log.d(TAG, "onMeasure: " + widthSize + " " + heightSize);
 
-        Log.d(TAG, "onMeasure: " + widthSize + " " + heightSize);
-
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        super.setMeasuredDimension(widthSize, heightSize);
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        super.setMeasuredDimension(widthSize, heightSize);
     }
 
     private int measureHandler(int measureSpec) {
@@ -49,10 +48,10 @@ public class CustomView extends View {
         return size;
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-    }
+//    @Override
+//    protected void onDraw(Canvas canvas) {
+//        super.onDraw(canvas);
+//    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {

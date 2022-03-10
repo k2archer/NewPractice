@@ -40,6 +40,9 @@ public class FragmentDemoActivity extends AppCompatActivity implements View.OnCl
                 replaceFragment(new FragmentViewTwo());
                 break;
             case R.id.btn_fragmentdemo_send:
+                if (fragmentView == null) {
+                    break;
+                }
                 fragmentView.getData(new FragmentViewOne.CallBack() {
                     @Override
                     public void getResult(String result) {              /*打印信息*/

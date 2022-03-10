@@ -76,7 +76,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.i(TAG, "onTouchEvent: ACTION_DONW");
+                Log.i(TAG, "onTouchEvent: ACTION_DONN");
                 break;
             case MotionEvent.ACTION_MOVE:
                 Log.i(TAG, "onTouchEvent: ACTION_MOVE");

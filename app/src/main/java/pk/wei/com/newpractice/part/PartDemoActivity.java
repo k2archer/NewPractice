@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,6 +34,10 @@ public class PartDemoActivity extends AppCompatActivity {
 
     @BindArray(R.array.languages)
     String[] languages;
+    @BindView(R.id.rb_image)
+    RadioButton rbImage;
+    @BindView(R.id.rb_text)
+    RadioButton rbText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,32 @@ public class PartDemoActivity extends AppCompatActivity {
                 // Another interface callback
             }
         });
+
+        init();
+    }
+
+    private void init() {
+        rbImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rbImage.setChecked(!rbImage.isChecked());
+            }
+        });
+        rbText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "onClick: " + rbText.isChecked());
+                rbText.setChecked(!rbText.isClickable());
+            }
+        });
+        rbText.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Log.d("TAG", "onCheckedChanged: " + rbText.isChecked());
+            }
+        });
+
+
     }
 
     @OnItemSelected(R.id.s_spinner_dialog)

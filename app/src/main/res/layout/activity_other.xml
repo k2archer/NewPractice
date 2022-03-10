@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout.OtherActivity">
+
+    <include layout="@layout/activity_title_action_bar" />
+
+    <ViewStub
+        android:id="@+id/stub_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/activity_other_ok"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ViewStub
+        android:id="@+id/stub_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/activity_other_no"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</LinearLayout>

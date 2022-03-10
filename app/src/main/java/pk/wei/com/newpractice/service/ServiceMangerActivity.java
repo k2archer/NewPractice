@@ -46,6 +46,7 @@ public class ServiceMangerActivity extends AppCompatActivity {
     Button startIntentServiceBtn;
 
     private Intent serviceIntent;
+    private boolean mIsBound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,7 @@ public class ServiceMangerActivity extends AppCompatActivity {
     @OnClick(R.id.bind_service_btn)
     public void onBindServiceClicked(View view) {
         Log.d(TAG, "onBindServiceClicked: ");
-        bindService(serviceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
+        mIsBound  = bindService(serviceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
     @OnClick(R.id.unbind_service_btn)
@@ -145,8 +146,9 @@ public class ServiceMangerActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (serviceConnection != null) {
+        if (serviceConnection != null && mIsBound) {
             unbindService(serviceConnection);
+            mIsBound = false;
         }
     }
 

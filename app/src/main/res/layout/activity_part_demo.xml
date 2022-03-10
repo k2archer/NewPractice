@@ -49,10 +49,147 @@
                 android:id="@+id/bt_normal_dialog"
                 android:text="Dialog"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/bt_item_dialog"
                 android:text="Dialog"
                 android:textAllCaps="false" />
         </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button android:background="@drawable/bt_on_off" />
+
+            <ToggleButton
+                android:background="@drawable/toggle_on_off"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:background="@color/transparent"
+                android:button="@drawable/toggle_on_off"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:background="@drawable/swh_bt_on_off"
+                android:checked="true"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <!--style="@style/main_radioButton_style"-->
+            <RadioButton
+                android:id="@+id/rb_image"
+                android:button="@null"
+                android:checked="false"
+                android:drawableTop="@drawable/radio_selector" />
+
+
+            <RadioButton
+                android:id="@+id/rb_text"
+                android:button="@null"
+                android:checked="false"
+                android:text="选择"
+                android:textColor="@drawable/radio_text_selector" />
+
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Switch
+                android:id="@+id/swh_1"
+                android:textOff=""
+                android:textOn="" />
+
+
+            <Switch
+                android:id="@+id/swh_3"
+                android:button="@drawable/swh_bt_on_off"
+                android:thumb="@color/transparent"
+                android:track="@color/transparent"
+                android:textOff=""
+                android:textOn="" />
+
+            <Switch
+                android:id="@+id/swh_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@mipmap/switch_on"
+                android:track="@mipmap/switch_off" />
+
+            <Switch
+                android:id="@+id/swh_5"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@color/transparent"
+                android:track="@drawable/my_switch_setting_selector" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@drawable/my_thumb"
+                android:track="@drawable/my_switch_setting_selector" />
+
+        </GridLayout>
+
+        <Switch
+            android:textOff=""
+            android:textOn=""
+            android:thumb="@drawable/my_thumb"
+            android:track="@drawable/my_switch_setting_selector"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"/>
+
+        <ToggleButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/swh_bt_on_off"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/toggle_on_off"
+            android:checked="true"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+
+        <Switch
+            android:layout_height="39dp"
+            android:layout_width="60dp"
+            android:background="@drawable/swh_bt_on_off"
+            android:thumb="@color/transparent"
+            android:track="@color/transparent"
+            android:textOff=""
+            android:textOn="" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/track_1"
+            android:thumb="@drawable/thumb_1"
+            android:textOff=""
+            android:textOn="" />
+
     </LinearLayout>
 </ScrollView>

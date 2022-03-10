@@ -16,13 +16,14 @@ import java.util.Map;
 import pk.wei.com.newpractice.animator.AnimatorDemoActivity;
 import pk.wei.com.newpractice.component.LifeCycleActivity;
 import pk.wei.com.newpractice.customViewDemo.CustomViewDemoActivity;
+import pk.wei.com.newpractice.dialog_demo.DialogDemoActivity;
 import pk.wei.com.newpractice.fragment.dialog.DialogFragmentDemoActivity;
 import pk.wei.com.newpractice.fragment.fragmentdemo.FragmentDemoActivity;
 import pk.wei.com.newpractice.layout.ConstraintActivity;
+import pk.wei.com.newpractice.layout.OtherActivity;
 import pk.wei.com.newpractice.part.PartDemoActivity;
 import pk.wei.com.newpractice.part.listviewdemo.ListViewDemoActivity;
 import pk.wei.com.newpractice.part.recyclerlistdemo.RecyclerDemoActivity;
-import pk.wei.com.newpractice.part.swipeRefreshLayout.SwipeRefreshDemoActivity;
 import pk.wei.com.newpractice.part.viewpagerdemo.ViewPagerDemoActivity;
 import pk.wei.com.newpractice.pattern.mvc.MVCDemoActivity;
 import pk.wei.com.newpractice.pattern.mvp.view.MVPDemoActivity;
@@ -82,16 +83,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ViewGroup mRootView = (ViewGroup)vGroup.getChildAt(0);
         traversalView(mRootView); // 遍历 View , Button 设置不可用
 
-
+        // Design Pattern
         buttons.put(R.id.mvc, MVCDemoActivity.class);
         buttons.put(R.id.mvp, MVPDemoActivity.class);
+        // 四大组件
         buttons.put(R.id.bt_activity, LifeCycleActivity.class);
         buttons.put(R.id.bt_service, ServiceMangerActivity.class);
+        // LayoutDemo
         buttons.put(R.id.constraint_btn, ConstraintActivity.class);
-        buttons.put(R.id.scroll_clash, ScrollClashDemoActivity.class);
+        buttons.put(R.id.bt_part_demo, PartDemoActivity.class);
         buttons.put(R.id.list_view_btn, ListViewDemoActivity.class);
         buttons.put(R.id.animator_btn, AnimatorDemoActivity.class);
         buttons.put(R.id.recycler_view_btn, RecyclerDemoActivity.class);
+        buttons.put(R.id.bt_other_demo, OtherActivity.class);
+        // View
+        buttons.put(R.id.scroll_clash, ScrollClashDemoActivity.class);
         buttons.put(R.id.view_pager_btn, ViewPagerDemoActivity.class);
         buttons.put(R.id.shared_preference_btn, SharedPreferencesDemoActivity.class);
         buttons.put(R.id.preference_activity_btn, PreferenceActivityDemoActivity.class);
@@ -99,14 +105,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons.put(R.id.DialogFragment, DialogFragmentDemoActivity.class);
         buttons.put(R.id.action_bar_btn, ActionBarDemoActivity.class);
         buttons.put(R.id.custom_view, CustomViewDemoActivity.class);
-
+        // 第三方框架
         buttons.put(R.id.glide_demo, GlideDemoActivity.class);
         buttons.put(R.id.rxjava_demo, RxJavaDemoActivity.class);
         buttons.put(R.id.retrofit_demo, RetrofitDemoActivity.class);
 
-        buttons.put(R.id.btn_test, SwipeRefreshDemoActivity.class);
+//        buttons.put(R.id.btn_test, ScrollDemoActivity.class);  // todo 测试
+        buttons.put(R.id.btn_test, DialogDemoActivity.class);  // todo 测试
 
-        buttons.put(R.id.bt_part_demo, PartDemoActivity.class);
 
 
 
