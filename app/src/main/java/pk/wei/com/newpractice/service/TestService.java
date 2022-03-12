@@ -80,22 +80,6 @@ public class TestService extends Service {
 
     // 通知保持 Service 前台，保活 Service
     private void startNotification() {
-//        Intent intent = new Intent(this, ServiceMangerActivity.class);
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
-//        Notification notification = null;
-//        Notification.Builder builder = new Notification.Builder(this)
-//                .setContentTitle("Title")
-//                .setContentText("text")
-//                .setWhen(System.currentTimeMillis())
-//                .setContentIntent(pendingIntent);
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-//            builder.setChannelId("TestChannel");
-//        }
-//        builder.setChannelId("TestChannel");
-//        /** 如果 service 被 destroy 会主取消 notification **/
-//        startForeground(notificationId, builder.build());
-
-
         String CHANNEL_ONE_ID = "CHANNEL_ONE_ID";
         String CHANNEL_ONE_NAME = "CHANNEL_ONE_ID";
         NotificationChannel notificationChannel;
@@ -169,6 +153,6 @@ public class TestService extends Service {
         Log.d(TAG, "onDestroy: ");
         stop(); // 需要停止 service 内部线程
 
-        /** 可在此发广播重启 Service ，保活 Service **/
+        /* todo 可在此发广播重启 Service ，保活 Service **/
     }
 }

@@ -2,6 +2,8 @@
 .gradle
 /build
 
+building
+
 # IntelliJ (IDE配置文件)
 *.iml
 .idea/workspace.xml

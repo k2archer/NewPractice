@@ -1,1 +1,6 @@
-include ':app', ':pklibrary', ':remoteparactice'
+include ':app', ':pklibrary', ':remoteparactice', ':lib-k2router-impl', ':lib-k2router', ':lib-k2router-compiler'
+
+project(':lib-k2router-impl').projectDir = new File('lib_router/lib-k2router-impl')
+project(':lib-k2router').projectDir = new File('lib_router/lib-k2router')
+project(':lib-k2router-compiler').projectDir = new File('lib_router/lib-k2router-compiler')
+

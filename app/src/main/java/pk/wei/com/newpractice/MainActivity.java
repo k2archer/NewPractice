@@ -5,13 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import pk.wei.com.newpractice.animator.AnimatorDemoActivity;
 import pk.wei.com.newpractice.component.LifeCycleActivity;
@@ -52,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mActionbar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         mActionbar.setDisplayShowCustomEnabled(true);
         mActionbar.setCustomView(R.layout.action_bar_top_base);
-        TextView tvTitle = (TextView) mActionbar.getCustomView().findViewById(
-                R.id.tv_title);
+        TextView tvTitle = (TextView) mActionbar.getCustomView().findViewById(R.id.tv_title);
         mActionbar.getCustomView().findViewById(R.id.iv_back)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -75,12 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
     }
 
-    Map<Integer, Class<?>> buttons = new HashMap<Integer, Class<?>>();
+    SparseArray<Class<?>> buttons = new SparseArray<>();
 
     private void initView() {
         // 注意这个 vGroup 并不是 activity.xml 中定义的根布局， mRootView 才是。
         ViewGroup vGroup = (ViewGroup) getWindow().getDecorView().findViewById(android.R.id.content);
-        ViewGroup mRootView = (ViewGroup)vGroup.getChildAt(0);
+        ViewGroup mRootView = (ViewGroup) vGroup.getChildAt(0);
         traversalView(mRootView); // 遍历 View , Button 设置不可用
 
         // Design Pattern
@@ -114,22 +111,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons.put(R.id.btn_test, DialogDemoActivity.class);  // todo 测试
 
 
-
-
-        for (Map.Entry<Integer, Class<?>> entry : buttons.entrySet()) {
-            findViewById(entry.getKey()).setOnClickListener(this);
-            findViewById(entry.getKey()).setEnabled(true);  // 添加监听器后，启用 Button
+        for (int i = 0; i < buttons.size(); i++) {
+            findViewById(buttons.keyAt(i)).setOnClickListener(this);
+            findViewById(buttons.keyAt(i)).setEnabled(true);  // 添加监听器后，启用 Button
         }
+
+//        for (Map.Entry<Integer, Class<?>> entry : buttons.entrySet()) {
+//            findViewById(entry.getKey()).setOnClickListener(this);
+//            findViewById(entry.getKey()).setEnabled(true);  // 添加监听器后，启用 Button
+//        }
     }
 
     // rootView 传入第一步中获取到的 mRootView
     private void traversalView(ViewGroup rootView) {
-        for(int i = 0; i<rootView.getChildCount(); i++)
-        {
+        for (int i = 0; i < rootView.getChildCount(); i++) {
             View childVg = rootView.getChildAt(i);
-            if(childVg instanceof ViewGroup)
+            if (childVg instanceof ViewGroup)
                 traversalView((ViewGroup) childVg);
-            else if(childVg instanceof Button) {
+            else if (childVg instanceof Button) {
                 childVg.setEnabled(false);
             }
         }
